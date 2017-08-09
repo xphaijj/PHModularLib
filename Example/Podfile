@@ -1,0 +1,11 @@
+#use_frameworks!
+
+target 'PHModularLib_Example' do
+  pod 'PHModularLib', :path => '../'
+
+  target 'PHModularLib_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
