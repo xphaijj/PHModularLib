@@ -21,8 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     mapManager = [[BMKMapManager alloc] init];
-    PHKeyConfig *result = [PHKeyConfig read];
-    BOOL ret = [mapManager start:result.baiduMapKey generalDelegate:self];
+    BOOL ret = [mapManager start:[PHKeyConfig shareInstance].baidu_map_key generalDelegate:self];
     if (!ret) {
         PHLogError(@"百度地图初始化失败");
     }

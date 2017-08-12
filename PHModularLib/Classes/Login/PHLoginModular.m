@@ -9,6 +9,7 @@
 #import "PHLoginModular.h"
 #import "PHMacro.h"
 #import "PHTools.h"
+#import "PHSystemModel.h"
 
 @implementation PHLoginModular
 
@@ -57,12 +58,12 @@
     /* 打开调试日志 */
     [[UMSocialManager defaultManager] openLog:YES];
     /* 设置友盟appkey */
-    [[UMSocialManager defaultManager] setUmSocialAppkey:USHARE_APPKEY];
+    [[UMSocialManager defaultManager] setUmSocialAppkey:[PHKeyConfig shareInstance].umeng_key];
     [self uMengConfig];
 }
 
 - (void)uMengConfig {
-    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:WECHAT_APPKEY appSecret:WECHAT_APPSECRET redirectURL:WECHAT_REDIRECT_URL];
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_WechatSession appKey:[PHKeyConfig shareInstance].wechat_key appSecret:[PHKeyConfig shareInstance].wechat_secret redirectURL:[PHKeyConfig shareInstance].wechat_url];
 }
 
 /**

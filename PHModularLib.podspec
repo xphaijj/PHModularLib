@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PHModularLib'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = '基础模块框架'
 
   s.description      = <<-DESC
@@ -15,11 +15,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.dependency 'PHBaseLib'
   s.source_files = 'PHModularLib/Classes/{Base,Manager}/*.{h,m}'
   s.public_header_files = 'PHModularLib/Classes/{Base,Manager}/*.h'
-  
-  
+	  
   s.subspec 'Login' do |sp|
     sp.source_files = 'PHModularLib/Classes/Login/*.{h,m}'
     sp.public_header_files = 'PHModularLib/Classes/Login/*.h'
@@ -51,5 +49,7 @@ Pod::Spec.new do |s|
     sp.public_header_files = 'PHModularLib/Classes/Upload/*.h'
     sp.dependency 'AliyunOSSiOS'
   end
+
+  s.dependency 'PHBaseLib'
   
 end
