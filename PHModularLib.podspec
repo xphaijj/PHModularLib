@@ -34,15 +34,8 @@ Pod::Spec.new do |s|
   s.subspec 'Map' do |sp|
     sp.source_files = 'PHModularLib/Classes/Map/*.{h,m}'
     sp.public_header_files = 'PHModularLib/Classes/Map/*.h'
-#   sp.vendored_frameworks = 'PHModularLib/Classes/Map/BaiduTraceSDK.framework'
     sp.dependency 'BaiduMapKit'
   end
-  
-#  s.subspec 'Push' do |sp|
-#    sp.source_files = 'PHModularLib/Classes/Push/*.{h,m}'
-#    sp.public_header_files = 'PHModularLib/Classes/Push/*.h'
-#    sp.dependency 'JPush'
-#  end
   
   s.subspec 'Upload' do |sp| 
     sp.source_files = 'PHModularLib/Classes/Upload/*.{h,m}'
