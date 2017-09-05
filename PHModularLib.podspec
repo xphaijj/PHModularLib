@@ -43,6 +43,12 @@ Pod::Spec.new do |s|
     sp.dependency 'AliyunOSSiOS'
   end
 
+  s.subspec 'Share' do |sp|
+    sp.source_files = 'PHModularLib/Classes/Share/*.{h,m}'
+    sp.public_header_files = 'PHModularLib/Classes/Share/*.h'
+    sp.dependency 'ShareSDK3'
+  end
+
   s.dependency 'PHBaseLib'
   
 end
